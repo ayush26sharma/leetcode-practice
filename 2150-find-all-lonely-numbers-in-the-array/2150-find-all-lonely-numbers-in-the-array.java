@@ -8,9 +8,7 @@ class Solution {
         }
         
         for(int i : nums){
-            if (map.get(i)==1){
-                if (!map.containsKey(i+1) && !map.containsKey(i-1)) arr.add(i);
-            }
+            if (map.get(i)==1 && !map.containsKey(i+1) && !map.containsKey(i-1)) arr.add(i);
         }
         return arr;
     }
