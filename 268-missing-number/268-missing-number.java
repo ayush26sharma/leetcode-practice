@@ -1,19 +1,10 @@
 class Solution {
     public int missingNumber(int[] nums) {
-        HashMap<Integer, Integer> hash = new HashMap<>();
-        for(int i = 0; i<=nums.length; i++){
-            hash.put(i,1);
+        int sum = 0;
+        for(int i = 0; i<nums.length; i++){
+            sum+=nums[i];
         }
-        for(int i : nums){
-            if (hash.containsKey(i)) hash.put(i, hash.get(i)+1);
-        }
-        int m = 0;
-        for (int i: hash.keySet()){
-            if (hash.get(i)==1) {
-                m=i;
-                break;                 
-            }
-        }
-        return m;
+        int sum2 = (nums.length*(nums.length+1))/2;
+        return sum2-sum;
     }
 }
