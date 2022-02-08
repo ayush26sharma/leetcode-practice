@@ -3,7 +3,7 @@ class Solution {
         int i = 0;
         int j = nums.length -1;
         int area = 0;
-        while (i<=j){
+        while (i<j){
             int length = Math.min(nums[i], nums[j]);
             int breadth = j-i;
             int k = length*breadth;
