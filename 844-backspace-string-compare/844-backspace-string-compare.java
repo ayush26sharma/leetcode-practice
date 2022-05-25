@@ -14,17 +14,6 @@ class Solution {
                 if(!b.isEmpty()) b.pop();
             }
         }
-        String k = "";
-        String l = "";
-        while(!a.isEmpty()){ 
-            k += a.peek();
-            a.pop();
-        }
-        while(!b.isEmpty()){
-            l += b.peek();
-            b.pop();
-        }
-        if(k.equals(l)) return true;
-        return false;
+        return a.equals(b);
     }
 }
