@@ -21,9 +21,6 @@ class Solution {
                 }
             }
         }
-        for(List<Integer>s:res){
-            res1.add(s);
-        }
-        return res1;
+        return new ArrayList<>(res);
     }
 }
