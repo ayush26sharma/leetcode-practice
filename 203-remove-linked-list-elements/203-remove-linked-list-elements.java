@@ -10,20 +10,19 @@
  */
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        Queue<ListNode> q= new LinkedList<>();
-        ListNode curr = head;
+        while(head!=null && head.val==val){
+            head=head.next;
+        }
+        if(head==null) return head;
+        ListNode curr = head.next;
+        ListNode prev = head;
         while(curr!=null){
-            if(curr.val!=val){
-                q.offer(curr);
+            if(curr.val==val){
+                prev.next=curr.next;
             }
+            else prev=curr;
             curr=curr.next;
         }
-        ListNode newHead = new ListNode(-1);
-        ListNode newHead1 = newHead;
-        while(!q.isEmpty()){
-            newHead.next = new ListNode(q.poll().val);
-            newHead=newHead.next;
-        }
-        return newHead1.next;
+        return head;
     }
 }
