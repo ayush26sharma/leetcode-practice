@@ -11,7 +11,6 @@ class Solution {
             }
         }
         for (int i = 0; i<nums.length; i++){
-            System.out.println(nums[i]);
             if(nums[i]>=0) return i+1;
         }
         return nums.length+1;
