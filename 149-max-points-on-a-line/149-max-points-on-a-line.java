@@ -2,8 +2,9 @@ class Solution {
     public int maxPoints(int[][] points) {
         int n = points.length;
         int result = 1;
+        HashMap<Double, Set<int[]>> slope = new HashMap<>();
         for(int i = 0; i <n-1; i++) {
-            HashMap<Double, Set<int[]>> slope = new HashMap<>();
+            slope.clear();
             for(int j = i+1; j<n; j++) {
                 double y = (double)(points[j][1] - points[i][1]);
                 double x = (double)(points[j][0] - points[i][0]);
