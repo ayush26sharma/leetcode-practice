@@ -15,11 +15,11 @@
  */
 class Solution {
     int sum = 0;
-    public void helper(TreeNode root, int x){
+    public void helper(TreeNode root, int x, int y){
         if(root==null) return;
-        helper(root.left, x);
-        helper(root.right, x);
-        if(root.val<=x){
+        helper(root.left, x, y);
+        helper(root.right, x, y);
+        if(root.val<=x && root.val>=y){
             sum+=root.val;
             // arr.add(root.val);
         }
@@ -28,11 +28,11 @@ class Solution {
         sum = 0;
         // ArrayList<Integer> arr1 = new ArrayList<>();
         // ArrayList<Integer> arr2 = new ArrayList<>();
-        helper(root, low);
-        int a = sum; sum = 0;
-        helper(root, high);
+        helper(root, high, low);
+        // int a = sum; sum = 0;
+        // helper(root, high);
         // System.out.println(arr1);
         // System.out.println(arr2);
-        return sum - a + low;
+        return sum;
     }
 }
