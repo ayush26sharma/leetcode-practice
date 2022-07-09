@@ -15,24 +15,24 @@
  */
 class Solution {
     int sum = 0;
-    public void helper(TreeNode root, int x, ArrayList<Integer> arr){
+    public void helper(TreeNode root, int x){
         if(root==null) return;
-        helper(root.left, x, arr);
-        helper(root.right, x, arr);
+        helper(root.left, x);
+        helper(root.right, x);
         if(root.val<=x){
             sum+=root.val;
-            arr.add(root.val);
+            // arr.add(root.val);
         }
     }
     public int rangeSumBST(TreeNode root, int low, int high) {
         sum = 0;
-        ArrayList<Integer> arr1 = new ArrayList<>();
-        ArrayList<Integer> arr2 = new ArrayList<>();
-        helper(root, low, arr1);
+        // ArrayList<Integer> arr1 = new ArrayList<>();
+        // ArrayList<Integer> arr2 = new ArrayList<>();
+        helper(root, low);
         int a = sum; sum = 0;
-        helper(root, high, arr2);
-        System.out.println(arr1);
-        System.out.println(arr2);
+        helper(root, high);
+        // System.out.println(arr1);
+        // System.out.println(arr2);
         return sum - a + low;
     }
 }
