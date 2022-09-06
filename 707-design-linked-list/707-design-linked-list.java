@@ -41,7 +41,7 @@ class MyLinkedList {
         Node newnode= new Node(val);
         if(size == 0){
             head = newnode;
-            // tail = newnode;
+            tail = newnode;
         }
         else{
             newnode.next=head;
@@ -56,11 +56,9 @@ class MyLinkedList {
             addAtHead(val);
         }
         else{
-            Node temp = head;
-            while(temp.next!=null){
-                temp=temp.next;
-            }
-            temp.next = new Node(val);
+            Node newnode= new Node(val);
+            tail.next=newnode;
+            tail=newnode;
         }
         size++;
 
@@ -105,6 +103,7 @@ class MyLinkedList {
                 counter++;
                 temp=temp.next;
             }
+            tail = temp;
             temp.next=null;
 
         }
@@ -122,7 +121,6 @@ class MyLinkedList {
 
         }
         size--;
-    
     }
     
 }
