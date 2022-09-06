@@ -96,20 +96,32 @@ class MyLinkedList {
     }
     
     public void deleteAtIndex(int index) {
-        if (index < 0 || index >= size) return;
-        size--;
-        
-        if (index == 0) {
-            head = head.next;
+        if(index >= size)
             return;
+        else if(index==size-1){
+            Node temp=head;
+            int counter=0;
+            while(counter<index-1){
+                counter++;
+                temp=temp.next;
+            }
+            temp.next=null;
+
         }
-        
-        Node curr = head;
-        for(int i = 0; i < index - 1; i++){
-            curr = curr.next;
+        else if(index == 0){
+            head=head.next;
         }
-        if (curr.next !=null)
-        curr.next = curr.next.next;
+        else{
+            Node temp= head;
+            int counter=0;
+            while(counter<index-1){
+                counter++;
+                temp=temp.next;
+            }
+            temp.next=temp.next.next;
+
+        }
+        size--;
     
     }
     
