@@ -25,9 +25,9 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 # Steps For Contribution
 
-0. Star the <a href="https://github.com/ayush26sharma/leetcode" title="given">this</a> repository.
+0. Star the <a href="https://github.com/ayush26sharma/leetcode" title="given">given</a> repository.
 
-1. Fork the <a href="https://github.com/ayush26sharma/leetcode" title="given">this</a> repository.
+1. Fork the <a href="https://github.com/ayush26sharma/leetcode" title="given">given</a> repository.
 
 2. Clone the forked repository.
 ```css
