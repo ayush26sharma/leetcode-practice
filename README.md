@@ -31,36 +31,31 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 2. Clone the forked repository.
 ```css
-git clone https://github.com/<your-github-username>/LeetCode-Problems-Solutions
-```
-  
-3. Navigate to the project directory.
-```py
-cd LeetCode-Problems-Solutions
+git clone https://github.com/ayush26sharma/leetcode.git
 ```
 
-4. Create a new branch.
+3. Create a new branch.
 ```css
 git checkout -b <your_branch_name>
 ```
 
-5. Make changes.
+4. Make changes.
 
-6. Stage your changes and commit
+5. Stage your changes and commit
 ```css
 git add -A
 
 git commit -m "<your_commit_message>"
 ```
 
-7. Push your local commits to the remote repo.
+6. Push your local commits to the remote repo.
 ```css
 git push -u origin <your_branch_name>
 ```
 
-8. Create a Pull Request.
+7. Create a Pull Request.
 
-9. Voila, you're all set.  :)
+8. Voila, you're all set.  :)
 
 
 ---
