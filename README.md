@@ -17,10 +17,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 
 6. Do not add a pre-existing code.
 
-8. Writing the author's name and the date modified is a must.
-
-9. Don't spam it will be rejected immediately.
-
 
 
 # Steps For Contribution
