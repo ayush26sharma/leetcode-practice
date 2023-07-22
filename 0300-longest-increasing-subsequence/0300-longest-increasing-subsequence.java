@@ -26,21 +26,4 @@ class Solution {
         // System.out.println(list);
         return list.size();
     }
-    
-    public void helper(int idx, int[] nums, List<Integer> ds, List<List<Integer>> ans){
-        if(idx>=nums.length){
-            ans.add(new ArrayList<>(ds));
-            return;
-        }
-        if(ds.size()>0){
-            if(ds.get(ds.size()-1)<nums[idx]) ds.add(nums[idx]);
-        }
-        else{
-            ds.add(nums[idx]);
-        }
-        helper(idx+1, nums,ds,ans);
-        if(ds.size()>0)ds.remove(ds.size()-1);
-        helper(idx+1, nums,ds,ans);
-
-    }
 }
