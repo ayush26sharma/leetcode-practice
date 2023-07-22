@@ -23,7 +23,7 @@ class Solution {
             list.set(l,nums[i]);
           }
         }
-        System.out.println(list);
+        // System.out.println(list);
         return list.size();
     }
     
